@@ -220,22 +220,6 @@ getELE('#basic-addon2').addEventListener('click', handleSearch)
 
 
 // hàm xử lý oninput
-
-// function handleOninput() {
-//   let txtMessages = document.querySelectorAll('.form-group span')
-//   let valueInputs = document.querySelectorAll('.form-group .form-control')
-//   console.log([...valueInputs]);
-//   [...valueInputs].map((item, index) => {
-//     item.oninput = () => {
-//       [...txtMessages].map((message, index) => {
-//         if (message) {
-//           message.innerHTML = ''
-//         }
-//       })
-//     }
-//   })
-
-// }
 function handleOninput(txtMessage, input) {
   let txtMessages = getELE(txtMessage)
   let inputForm = getELE(input)

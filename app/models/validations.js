@@ -30,7 +30,7 @@ function validations() {
   }
   this.checkAccount = (inputValue, spanID, message, array) => {
     let isAccount = false
-    isAccount = array.some(item => item.taiKhoan === inputValue)
+    isAccount = array.some(item => item.taiKhoan === inputValue.trim())
     if (isAccount) {
       spanID.style.color = 'red'
       spanID.innerHTML = message
