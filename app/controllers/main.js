@@ -9,8 +9,8 @@
  * B8: tạo biến newArrayListUsers = [], push các giá trị từ response.data vào ->  tạo hàm handleSearch -> tìm kiếm tài khoản --> in ra ui
  */
 
-var infoUsers = new userServices()
-var isValid = new validations()
+var infoUsers = new UserServices()
+var isValid = new Validations()
 var newArrayListUsers = []
 //hàm lấy element
 function getELE(value) {
@@ -96,7 +96,7 @@ function handleAddUser() {
   let isValidForm = handleCheckValidation()
   let isValidAccount = checkValidAccount()
   if (isValidForm && isValidAccount) {
-    let newUsers = new user(account, name, pass, email, kind, language, description, img)
+    let newUsers = new User(account, name, pass, email, kind, language, description, img)
     infoUsers.addUser(newUsers)
       .then((response) => {
         ResetForm()
@@ -160,7 +160,7 @@ function handleUpdateUser(id) {
   let description = getELE('#MoTa').value
   let isValidForm = handleCheckValidation()
   if (isValidForm) {
-    let newUsers = new user(account, name, pass, email, kind, language, description, img)
+    let newUsers = new User(account, name, pass, email, kind, language, description, img)
     infoUsers.updateUser(newUsers, id)
       .then((response) => {
         listUser()

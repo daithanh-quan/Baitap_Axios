@@ -17,7 +17,7 @@
  * inputValue.length>60 ? false, spanId.innerHTMl = message : true
  */
 
-function validations() {
+function Validations() {
   this.checkEmpty = (inputValue, spanID, message) => {
     if (inputValue.trim() == "") {
       spanID.style.color = 'red'

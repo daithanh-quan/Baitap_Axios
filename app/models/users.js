@@ -1,4 +1,4 @@
-function user(account, name, password, email, kind, language, description, img) {
+function User(account, name, password, email, kind, language, description, img) {
   this.taiKhoan = account;
   this.hoTen = name;
   this.matKhau = password;

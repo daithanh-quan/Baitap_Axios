@@ -7,7 +7,7 @@
  * B6: tạo phương thức deleteUser(id): url, method:'DELETE', data:id //   xóa user
  */
 
-function userServices() {
+function UserServices() {
   this.getListUser = () => {
     return axios({
       method: 'GET',
